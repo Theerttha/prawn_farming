@@ -7,7 +7,7 @@ export default function FirebaseTable() {
 
   useEffect(() => {
     fetchData();
-    const interval = setInterval(fetchData, 100);   // refresh every 10 sec
+    const interval = setInterval(fetchData, 1000);   // refresh every 10 sec
     return () => clearInterval(interval);
   }, []);
 
