@@ -14,7 +14,7 @@ export default function FirebaseTable() {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        `https://hallo-esp-default-rtdb.firebaseio.com/sensorLogs/device1.json`
+        `https://hallo-esp-default-rtdb.firebaseio.com/sensorLogs/device2.json`
       );
       console.log("res",res.data);
       if (!res.data) return;
