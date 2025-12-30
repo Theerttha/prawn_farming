@@ -22,6 +22,7 @@ export default function FirebaseTable() {
       const arr = Object.values(res.data)
       .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)) // newest first
       .slice(0, 10);   // 👈 ONLY 10 LATEST
+
       setRows(arr);
     } catch (err) {
       console.error(err);
@@ -43,11 +44,11 @@ export default function FirebaseTable() {
         </thead>
         <tbody>
           {rows.map((r, i) => (
-            <tr key={i}>
+            <tr key={i} >
               <td >{r.timestamp}</td>
               <td>{r.temperature}</td>
               <td>{r.tds}</td>
-              <td>{r.ph}</td>
+              <td>-</td>
               <td>{r.orp}</td>
             </tr>
           ))}
